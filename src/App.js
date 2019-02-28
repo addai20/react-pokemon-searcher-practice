@@ -18,7 +18,7 @@ class App extends Component {
     })
   }
 
-  onQuery = (event) => {
+  onSearch = (event) => {
     this.setState({filterTerm: event.target.value})
   }
 
@@ -28,7 +28,7 @@ class App extends Component {
       <div id="container">
         <img id="pokemon-logo" src="https://learn-co-curriculum.github.io/js-pokemon-search-practice-assignment/images/pokemon.png" alt="" />
         <form id="pokemon-search-form" action="" method="">
-          <input id="pokemon-search-input" type="text" name="" onChange={this.onQuery}/>
+          <input id="pokemon-search-input" type="text" value={this.state.filterTerm} onChange={this.onSearch}/>
         </form>
         <div id="pokemon-container">
           {
